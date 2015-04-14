@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Operadores</title>
+
+		<meta name="description" content="Operators">
+		<meta name="author" content="Javier Guaje">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/dark-blue.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                
+<section data-markdown>
+	# Operadores
+	#####Javier Guaje
+</section>
+<section data-markdown>
+	# Operadores
+</section>
+<section>
+	<section data-markdown>
+		## Aritméticos
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Operadores Aritméticos
+
+		- __Suma(+)__: De la operación 2.0 + 3.0 se obtiene 5.0.
+		- <!-- .element: class="fragment" -->
+		__Resta(-)__: De la operación 2.0 - 3.0 se obtiene -1.0.
+		- <!-- .element: class="fragment" -->
+		__Multiplicación(*)__: De la operación 2.0 * 3.0 se obtiene 6.0.
+		- <!-- .element: class="fragment" -->
+		__División(/)__: De la operación -3.0 / 2 se obtiene -1.5. De la operación -3 / 2 se obtiene -1.
+		- <!-- .element: class="fragment" -->
+		__Módulo(%)__: De la operación 9 % 4 se obtiene 1.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Operadores Aritméticos
+
+		__Cambio de Signo(-)__: De la operación -23 se obtiene -23.
+		</script>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Operadores Aritméticos: Python
+
+		- __Potenciación(**)__: De la operación 2**2 se obtiene 4.
+		- <!-- .element: class="fragment" -->
+		__División exacta(//)__: De la operación 9 // 2 se obtiene 4. De la operación 9.0 // 2.0 se obtiene 4.0.
+		</script>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Asignación
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Operadores de Asignación
+
+		__Asignación(=)__: Asigna el valor de evaluar la parte de la derecha a la variable de la parte de la izquierda. Por ejemplo, pi = 3.14159265.
+		</script>
+	</section>
+
+	<section>
+		<h2>Operadores de Asignación</h2>
+
+		<ul>
+			<li><b>Asignación con Suma(+=)</b>: La expresión x += 2, es equivalente a la expresión x = x + 2.</li>
+			<li class="fragment"><b>Asignación con Resta(-=)</b>: La expresión x -= 2, es equivalente a la expresión x = x - 2.</li>
+			<li class="fragment"><b>Asignación con Multiplicación(*=)</b>: La expresión x *= 2, es equivalente a la expresión x = x * 2.</li>
+			<li class="fragment"><b>Asignación con División(/=)</b>: La expresión x /= 2, es equivalente a la expresión x = x / 2.</li>
+			<li class="fragment"><b>Asignación con Residuo(%=)</b>: La expresión x %= 2, es equivalente a la expresión x = x % 2.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Operadores de Asignación: Python</h2>
+
+		<ul>
+			<li><b>Asignación con Potenciación(**=)</b>: La expresión x **= 2, es equivalente a la expresión x = x ** 2.</li>
+			<li class="fragment"><b>Asignación con División exacta(//=)</b>: La expresión x //= 2, es equivalente a la expresión x = x // 2.</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Incremento
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Incremento
+
+		__Incremento(++)__: Incrementa el valor de la variable en 1.
+
+		<!-- .element: class="fragment" -->
+		Las expresiones i++ o ++i son equivalentes a la expresión i += 1 y por lo tanto también son equivalentes a la expresión i = i + 1.
+		</script>
+	</section>
+
+	<section data-markdown>
+		## Incremento
+
+		El operador ++ se puede utilizar como un operador __prefijo__ (++i) o __postfijo__ (i++), y dependiendo de la posición donde se ubique entonces la asignación se hace antes o después del incremento.
+	</section>
+
+	<section data-markdown>
+		## Preincremento
+
+		__++x__: La variable x se incrementa en 1 y luego se retorna el nuevo valor de la variable.
+	</section>
+
+	<section data-markdown>
+		## Preincremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	int y = ++x;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Preincremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	x += 1;
+	int y = x;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Postincremento
+
+		__x++__: Retorna el actual valor de la variable x y luego incrementa su valor en 1.
+	</section>
+
+	<section data-markdown>
+		## Postincremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	int y = x++;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Postincremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	int y = x;
+	x += 1;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Decremento
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Decremento
+
+		__Decremento(--)__: Decrementa el valor de la variable en 1.
+
+		<!-- .element: class="fragment" -->
+		Las expresiones i-- o --i son equivalentes a la expresión i -= 1 y por lo tanto también son equivalentes a la expresión i = i - 1.
+		</script>
+	</section>
+
+	<section data-markdown>
+		## Decremento
+
+		El operador -- se puede utilizar como un operador __prefijo__ (--i) o __postfijo__ (i--), y dependiendo de la posición donde se ubique entonces la asignación se hace antes o después del incremento.
+	</section>
+
+	<section data-markdown>
+		## Predecremento
+
+		__--x__: La variable x se decrementa en 1 y luego se retorna el nuevo valor de la variable.
+	</section>
+
+	<section data-markdown>
+		## Predecremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	int y = --x;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Predecremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	x -= 1;
+	int y = x;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Postdecremento
+
+		__x--__: Retorna el actual valor de la variable x y luego decrementa su valor en 1.
+	</section>
+
+	<section data-markdown>
+		## Postdecremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	int y = x--;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Postdecremento: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int x = 2;
+	int y = x;
+	x -= 1;
+	cout << x << endl;
+	cout << y << endl;
+
+	return 0;
+}
+```
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Lógicos
+	</section>
+
+	<section>
+		<h2>Operadores Lógicos</h2>
+
+		<ul>
+			<li>
+				<b>Negación</b>: \(\lnot\).
+
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:center">!</td>
+							<td style="text-align:center">not</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="fragment">
+				<b>Conjunción</b>: \(\land\).
+
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:center">&&</td>
+							<td style="text-align:center">and</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+			<li class="fragment">
+				<b>Disyunción</b>: \(\lor\).
+
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:center">||</td>
+							<td style="text-align:center">or</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Relacionales
+	</section>
+
+	<section>
+		<h2>Operadores Relacionales</h2>
+
+		<ul>
+			<li><b>Mayor que</b>: > (>).</li>
+			<li class="fragment"><b>Menor que</b>: < (<).</li>
+			<li class="fragment"><b>Mayor o igual que</b>: \(\geq\) (>=).</li>
+			<li class="fragment"><b>Menor o igual que</b>: \(\leq\) (<=).</li>
+			<li class="fragment"><b>Igualdad</b>: = (==).</li>
+			<li class="fragment">
+				<b>Desigualdad</b>: \(\neq\).
+
+				<table>
+					<thead>
+						<tr>
+							<th style="text-align:center">C++</th>
+							<th style="text-align:center">Python</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="text-align:center">!=</td>
+							<td style="text-align:center">
+								!=
+								<br>
+								<>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</li>
+		</ul>
+	</section>
+
+	<section data-markdown>
+		## Operadores Relacionales: Ejemplo
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	int a = 0.5;
+	bool f = (0 < a && a <= 1);
+	cout << a << endl;
+	cout << f << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Operadores Relacionales: Ejemplo
+
+```python
+a = 0.5
+f = (0 < a and a <= 1)
+print(a)
+print(f)
+```
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Representación Binaria
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">64</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">'A' = 65</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">'0'</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">1</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">'1'</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">1</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">'Ñ' = 209</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">x</th>
+					<td style="text-align:center">x</th>
+					<td style="text-align:center">x</th>
+					<td style="text-align:center">x</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">x</th>
+					<td style="text-align:center">x</th>
+					<td style="text-align:center">x</th>
+					<td style="text-align:center">x</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">'Ñ' = 209</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Operadores sobre Bits
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">60</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">1</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Representación Binaria</h2>
+		
+		<table>
+			<thead>
+				<tr>
+					<th colspan="4" style="text-align:center">13</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">\(2^7 = 128\)</th>
+					<td style="text-align:center">\(2^6 = 64\)</th>
+					<td style="text-align:center">\(2^5 = 32\)</th>
+					<td style="text-align:center">\(2^4 = 16\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">0</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">\(2^3 = 8\)</th>
+					<td style="text-align:center">\(2^2 = 4\)</th>
+					<td style="text-align:center">\(2^1 = 2\)</th>
+					<td style="text-align:center">\(2^0 = 1\)</th>
+				</tr>
+				<tr>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">1</th>
+					<td style="text-align:center">0</th>
+					<td style="text-align:center">1</th>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Operadores sobre Bits
+
+		- __AND(&)__: De la operación 60(0011110) & 13(00001101) se obtiene 12(00001100).
+		- <!-- .element: class="fragment" -->
+		__OR(|)__: De la operación 60(00111100) | 13(00001101) se obtiene 61(00111101).
+		- <!-- .element: class="fragment" -->
+		__Complemento(~)__: De la operación ~60(00111100) se obtiene 195(11000011) y de la operación ~13(00001101) se obtiene 242(11110010).
+		</script>
+	</section>
+	<section data-markdown>
+		<script type="text/template">
+		## Operadores sobre Bits
+
+		- __Desplazamiento a la Izquierda(<<)__: De la operación 60(00111100) << 2 se obtiene 140(11110000) y de la operación 13(00001101) << 2 se obtiene 52(00110100).
+		- <!-- .element: class="fragment" -->
+		__Desplazamiento a la Derecha(>>)__: De la operación 60(00111100) >> 2 se obtiene 15(00001111) y de la operación 13(00001101) >> 2 se obtiene 142(00000011).
+		</script>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Precedencia de Operadores
+	</section>
+
+	<section>
+		<h2>Precedencia de Operadores: C++</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th style="text-align:center">Operador(es)</th>
+					<th style="text-align:center">Prioridad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">()</td>
+					<td style="text-align:center">1</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">
+						(postincremento)++
+						<br>
+						(postdecremento)--
+					</td>
+					<td style="vertical-align:middle; text-align:center">2</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">
+						! ~
+						<br>
+						-(signo) +(signo)
+						<br>
+						++(preincremento)
+						<br>
+						--(predecremento)
+					</td>
+					<td style="vertical-align:middle; text-align:center">3</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">* / %</td>
+					<td style="text-align:center">4</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">+ -</td>
+					<td style="text-align:center">5</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Precedencia de Operadores: C++</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th style="text-align:center">Operador(es)</th>
+					<th style="text-align:center">Prioridad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">>> <<</td>
+					<td style="text-align:center">6</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">< > <= >=</td>
+					<td style="text-align:center">7</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">== !=</td>
+					<td style="text-align:center">8</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">&</td>
+					<td style="text-align:center">9</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">|</td>
+					<td style="text-align:center">10</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">&&</td>
+					<td style="text-align:center">11</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">||</td>
+					<td style="text-align:center">12</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">= += -= *= /=</td>
+					<td style="text-align:center">13</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Precedencia de Operadores: Python</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th style="text-align:center">Operador(es)</th>
+					<th style="text-align:center">Prioridad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">()</td>
+					<td style="text-align:center">1</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">**</td>
+					<td style="text-align:center">2</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">~ -(signo) +(signo)</td>
+					<td style="text-align:center">3</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">* / % //</td>
+					<td style="text-align:center">4</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">+ -</td>
+					<td style="text-align:center">5</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">>> <<</td>
+					<td style="text-align:center">6</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section>
+		<h2>Precedencia de Operadores: Python</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th style="text-align:center">Operador(es)</th>
+					<th style="text-align:center">Prioridad</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="text-align:center">&</td>
+					<td style="text-align:center">7</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">|</td>
+					<td style="text-align:center">8</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">< > <= >=</td>
+					<td style="text-align:center">9</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center"><> == !=</td>
+					<td style="text-align:center">10</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">= += -= *= /= **= //=</td>
+					<td style="text-align:center">11</td>
+				</tr>
+				<tr class="fragment">
+					<td style="text-align:center">not or and</td>
+					<td style="text-align:center">12</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section data-markdown>
+		<script type="text/template">
+		## Precedencia de Operadores: Ejemplo
+		- 42 / 6 - 7 * 3 + 39
+		- <!-- .element: class="fragment" -->
+		7 - 21 + 39
+		- <!-- .element: class="fragment" -->
+		25
+		</script>
+	</section>
+</section>
+<section>
+	<section data-markdown>
+		## Operador Ternario
+	</section>
+
+	<section data-markdown>
+		## Operador Ternario: C++
+
+```cpp
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+	char a = 'A';
+	bool b = (65 <= a && a <= 90) ? true : false;
+	cout << a << endl;
+	cout << b << endl;
+
+	return 0;
+}
+```
+	</section>
+
+	<section data-markdown>
+		## Operador Ternario: Python
+
+```python
+a = 'A'
+b = True if (65 <= ord(a) and ord(a) <= 90) else False;
+print(a)
+print(b)
+```
+	</section>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: false,
+
+				// Display the page number of the current slide
+				slideNumber: true,
+
+				// Push each slide change to the browser history
+				history: true,
+
+				// Enable keyboard shortcuts for navigation
+				keyboard: true,
+
+				// Enable the slide overview mode
+				overview: true,
+
+				// Vertical centering of slides
+				center: true,
+
+				// Enables touch navigation on devices with touch input
+				touch: true,
+
+				// Loop the presentation
+				loop: false,
+
+				// Change the presentation direction to be RTL
+				rtl: false,
+
+				// Turns fragments on and off globally
+				fragments: true,
+
+				// Flags if the presentation is running in an embedded mode,
+				// i.e. contained within a limited portion of the screen
+				embedded: false,
+
+				// Flags if we should show a help overlay when the questionmark
+				// key is pressed
+				help: true,
+
+				// Number of milliseconds between automatically proceeding to the
+				// next slide, disabled when set to 0, this value can be overwritten
+				// by using a data-autoslide attribute on your slides
+				autoSlide: 0,
+
+				// Stop auto-sliding after user input
+				autoSlideStoppable: true,
+
+				// Enable slide navigation via mouse wheel
+				mouseWheel: false,
+
+				// Hides the address bar on mobile devices
+				hideAddressBar: true,
+
+				// Opens links in an iframe preview overlay
+				previewLinks: false,
+
+				// Transition style
+				transition: 'slide', // default/none/fade/slide/convex/concave/zoom
+
+				// Transition speed
+				transitionSpeed: 'default', // default/fast/slow
+
+				// Transition style for full page slide backgrounds
+				backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+				// Number of slides away from the current that are visible
+				viewDistance: 3,
+
+				// Parallax background image
+				parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+				// Parallax background size
+				parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+				// Optional reveal.js plugins
+				dependencies: [
+				// Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+
+				// Interpret Markdown in <section> elements
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+
+				// Syntax highlight for <code> elements
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+
+				// Zoom in and out with Alt+click
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+
+				// Speaker notes
+				{ src: 'plugin/notes/notes.js', async: true },
+
+				// Remote control your reveal.js presentation using a touch device
+				{ src: 'plugin/remotes/remotes.js', async: true },
+
+				// MathJax
+				{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
